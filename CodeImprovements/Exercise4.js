@@ -1,9 +1,4 @@
-function findEvenNumbers(numbers) {
-  var evenNumbers = [];
-  for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 === 0) {
-      evenNumbers.push(numbers[i]);
-    }
-  }
-  return evenNumbers;
-}
+const findEvenNumbers = (numbers) => {
+  if (!Array.isArray(numbers)) throw new Error("Invalid Input");
+  return numbers.filter((num) => num % 2 === 0);
+};
