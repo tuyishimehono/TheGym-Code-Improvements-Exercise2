@@ -1,9 +1,4 @@
-function discount(totalamount) {
-  var disc;
-  if (totalamount > 100) {
-    disc = totalamount * 0.1;
-  } else {
-    disc = totalamount * 0.05;
-  }
-  return disc;
-}
+const calculateDiscount = (totalAmount) => {
+  if (typeof totalAmount !== "number") throw new Error("Invalid Input");
+  return totalAmount > 100 ? totalAmount * 0.1 : totalAmount * 0.05;
+};
