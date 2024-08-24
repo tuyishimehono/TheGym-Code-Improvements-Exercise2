@@ -1,10 +1,7 @@
-function calculateAverage(numbers) {
-  var sum = 0;
-  var count = 0;
-  for (var i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-    count++;
-  }
-  var average = sum / count;
-  return average;
-}
+const calculateAverage = (numbers) => {
+  if (!Array.isArray(numbers)) throw new Error("Invalid input");
+  const sumOfNumbers = numbers.reduce(
+    (previousValue, currentValue) => previousValue + currentValue
+  );
+  return sumOfNumbers / numbers.length;
+};
