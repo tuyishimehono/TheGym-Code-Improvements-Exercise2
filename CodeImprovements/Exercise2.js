@@ -1,7 +1,3 @@
-function greet(name) {
-  if (name) {
-    return "Hello, " + name + "!";
-  } else {
-    return "Hello!";
-  }
-}
+const greetPerson = (name) => {
+  return name ? `Hello, ${name}!` : `Hello!`;
+};
